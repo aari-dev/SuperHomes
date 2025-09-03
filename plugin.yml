@@ -1,0 +1,44 @@
+name: SuperHomes
+version: 1.0.0
+main: dev.aari.superhomes.SuperHomes
+api-version: 1.21
+
+commands:
+  sethome:
+    description: Set a home
+    usage: /sethome [name]
+    permission: superhomes.use
+  homes:
+    description: Open homes GUI
+    usage: /homes
+    permission: superhomes.use
+  home:
+    description: Home management commands
+    usage: /home [rename|delete] <args>
+    permission: superhomes.use
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+    permission: superhomes.use
+  ahomesee:
+    description: View another player's homes
+    usage: /ahomesee <player>
+    permission: superhomes.admin
+  ahome:
+    description: Admin home management
+    usage: /ahome <otp|del|rename> <player> <home> [new_name]
+    permission: superhomes.admin
+
+permissions:
+  superhomes.use:
+    description: Basic homes usage
+    default: true
+  superhomes.admin:
+    description: Admin homes management
+    default: op
+  superhomes.homes.4:
+    description: Allows up to 400 homes (4 home groups)
+    default: false
+  superhomes.homes.5:
+    description: Allows up to 500 homes (5 home groups)
+    default: false
