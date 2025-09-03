@@ -1,0 +1,45 @@
+# SuperHomes Configuration
+
+# Default homes per player (multiplied by 100 for total slots)
+# Players get 3 pages by default = 300 homes (21 homes per page × ~14.3 pages, but 7 homes per page × 43 pages)
+default-homes: 3
+
+# Home limits by permission:
+# superhomes.homes.4 = 400 homes (57+ pages)
+# superhomes.homes.5 = 500 homes (71+ pages)
+# superhomes.homes.6 = 600 homes (85+ pages)
+# superhomes.homes.7 = 700 homes (100 pages)
+
+# Maximum pages available: 100 pages
+# Each page contains 7 home slots
+# Total possible homes: 700 (7 × 100)
+
+# Database configuration
+database:
+  # SQLite is used by default
+  sqlite:
+    file: "homes.db"
+
+  # MySQL configuration (set enabled to true to use)
+  mysql:
+    enabled: false
+    host: "localhost"
+    port: 3306
+    database: "minecraft"
+    username: "root"
+    password: ""
+
+# Messages
+messages:
+  only-players: "§cOnly players can use this command!"
+  no-permission: "§cYou don't have permission!"
+  no-page-permission: "§cYou don't have permission to access this page!"
+  player-not-found: "§cPlayer not found!"
+  max-homes-reached: "§cYou've reached the maximum number of homes!"
+  home-set: "§aHome '{home}' set successfully!"
+  home-not-found: "§cHome not found!"
+  home-deleted: "§aHome '{home}' deleted successfully!"
+  home-already-exists: "§cA home with that name already exists!"
+  home-renamed: "§aHome renamed from '{old}' to '{new}' successfully!"
+  teleporting: "§e§lGOLDVANILLA ▪§r§aTeleporting in §c{seconds}s"
+  teleport-cancelled: "§e§lGOLDVANILLA ▪§r§cTeleport canceled, you moved!"
